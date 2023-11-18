@@ -1,9 +1,10 @@
 from dataset import cut_video, check_metadata
-from yolo import yolo_train, yolo_test_by_live
+from yolo import yolo_train, yolo_test_by_image, yolo_test_by_live
 
 if __name__ == "__main__":
-    # cut_video('C:/Users/ji055/Desktop/tl_videos/red/RED.mp4', 'tld_red_', 5)
+    # cut_video('./RED.mp4', 'tld_red_', 5)
     # check_metadata('./target/red')
     # yolo_train()
+    # yolo_test_by_image('path')
     # yolo_test_by_live()
     pass

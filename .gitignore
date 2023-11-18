@@ -95,3 +95,4 @@ fabric.properties
 target/
 runs/
 yolov8n.pt
+yolo_config.yaml
