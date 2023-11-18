@@ -50,8 +50,7 @@ mixup: 0.1  # image mixup (probability)
 * `main.py` 파일에서 `yolo_train()` 함수의 주석을 해제하고 실행하면 학습이 진행된다.
 
 # 모델 성능
-- 학습 데이터셋: 1,734장 
-- [!model_train_result](/model_train_result.png)
+![model_train_result](/model_train_result.png)
 
 # 개발자
 - 한양대학교 ERICA 스마트융합공학부 소속 2023030137 최시훈 (스마트ICT융합 전공) [PM]
