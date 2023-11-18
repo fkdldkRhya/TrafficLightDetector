@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 
 def yolo_test_by_live():
-    model = YOLO("./runs/detect/yolov8n_custom/weights/best.pt")
+    model = YOLO("./runs/detect/yolov8n_STLv6/weights/best.pt")
     cap = cv2.VideoCapture(1)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 940)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 780)

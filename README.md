@@ -40,11 +40,11 @@ names: ["tld_green", "tld_red"]
 translate: 0.1  # image translation (+/- fraction)
 scale: 0.2  # image scale (+/- gain)
 shear: 0.2  # image shear (+/- deg) from -0.5 to 0.5
-perspective: 0.1  # image perspective (+/- fraction), range 0-0.001
-flipud: 0.7  # image flip up-down (probability)
-fliplr: 0.5  # image flip left-right (probability)
+#perspective: 0.1  # image perspective (+/- fraction), range 0-0.001
+#flipud: 0.7  # image flip up-down (probability)
+#fliplr: 0.5  # image flip left-right (probability)
 mosaic: 0.3  # image mosaic (probability)
-mixup: 0.1  # image mixup (probability)
+#mixup: 0.1  # image mixup (probability)
 # -----------------------------------------------------------------
 ```
 * `main.py` 파일에서 `yolo_train()` 함수의 주석을 해제하고 실행하면 학습이 진행된다.

@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 
 def yolo_test_by_image(path):
-    model = YOLO("./runs/detect/yolov8n_custom/weights/best.pt")
+    model = YOLO("./runs/detect/yolov8n_STLv6/weights/best.pt")
 
     results = model.predict(path, line_thickness=2)
     res_plot = results[0].plot()
