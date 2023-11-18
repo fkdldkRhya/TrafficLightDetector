@@ -9,7 +9,7 @@ def yolo_train():
     results = model.train(
         data='./yolo_config.yaml',
         imgsz=640,
-        epochs=10,
+        epochs=8,
         batch=8,
         name='yolov8n_custom',
         workers=0,
