@@ -11,8 +11,8 @@ def yolo_train():
         imgsz=640,
         epochs=8,
         batch=8,
-        name='yolov8n_STLv6',
-        workers=15,
+        name='yolov8n_SVTLv6',
+        workers=4,
     )
 
     print(results)
