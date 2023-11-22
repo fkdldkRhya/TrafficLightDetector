@@ -39,16 +39,18 @@ names: ["tld_green", "tld_red"]
 # Hyperparameters -------------------------------------------------
 translate: 0.1  # image translation (+/- fraction)
 scale: 0.2  # image scale (+/- gain)
-shear: 0.2  # image shear (+/- deg) from -0.5 to 0.5
+#shear: 0.2  # image shear (+/- deg) from -0.5 to 0.5
 #perspective: 0.1  # image perspective (+/- fraction), range 0-0.001
 #flipud: 0.7  # image flip up-down (probability)
 #fliplr: 0.5  # image flip left-right (probability)
-mosaic: 0.3  # image mosaic (probability)
+#mosaic: 0.3  # image mosaic (probability)
 #mixup: 0.1  # image mixup (probability)
 # -----------------------------------------------------------------
 ```
 * `main.py` 파일에서 `yolo_train()` 함수의 주석을 해제하고 실행하면 학습이 진행된다.
-
+* Data Augmentation을 적용하려면 `yolo_config.yaml` 파일의 Hyperparameters 부분을 수정한다.
+  + Hyperparameters 는 `yolov8n.pt` 모델을 `원본`데이터로 학습한 후 다음과 같은 순서로 파라미터를 적용시켜 각각 따로 학습한다.
+  + `translate` > `scale`
 # 모델 성능
 ![model_train_result](/model_train_result.png)
 

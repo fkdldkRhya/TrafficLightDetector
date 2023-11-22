@@ -5,14 +5,14 @@ from ultralytics import YOLO
 
 
 def yolo_test_by_live():
-    model = YOLO("./runs/detect/yolov8n_SVTLv6/weights/best.pt")
+    model = YOLO("./runs/detect/yolov8n_SVTLv6_da_scale/weights/best.pt")
     cap = cv2.VideoCapture(1)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 940)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 780)
 
     CONFIDENCE_THRESHOLD = 0.6
     class_list = ["tld_green", "tld_red"]
-    GREEN = (0, 255, 0)
+    RED = (0, 0, 255)
     WHITE = (255, 255, 255)
 
     while True:
@@ -32,7 +32,7 @@ def yolo_test_by_live():
 
             xmin, ymin, xmax, ymax = int(data[0]), int(data[1]), int(data[2]), int(data[3])
             label = int(data[5])
-            cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), GREEN, 2)
+            cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), RED, 2)
             cv2.putText(frame, class_list[label] + ' ' + str(round(confidence, 2)) + '%', (xmin, ymin), cv2.FONT_ITALIC,
                         1, WHITE, 2)
 
