@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 def yolo_train():
     # Load the model.
-    model = YOLO('yolov8n.pt')
+    model = YOLO('../runs/detect/yolov8n_SVTLv7_da_fusion/weights/best.pt')
 
     # Training.
     results = model.train(
@@ -11,8 +11,8 @@ def yolo_train():
         imgsz=640,
         epochs=8,
         batch=8,
-        name='yolov8n_SVTLv6',
-        workers=4,
+        name='yolov8n_SVTLv7_da_fusion4',
+        workers=5,
     )
 
     print(results)

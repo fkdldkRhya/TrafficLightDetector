@@ -5,12 +5,12 @@ from ultralytics import YOLO
 
 
 def yolo_test_by_live():
-    model = YOLO("./runs/detect/yolov8n_SVTLv6_da_scale/weights/best.pt")
-    cap = cv2.VideoCapture(1)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 940)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 780)
+    model = YOLO("./runs/detect/yolov8n_SVTLv7_da_fusion4/weights/best.pt")
+    cv2.namedWindow('yolo_test_by_live', cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('yolo_test_by_live', 640, 480)
+    cap = cv2.VideoCapture('3.mp4')
 
-    CONFIDENCE_THRESHOLD = 0.6
+    CONFIDENCE_THRESHOLD = 0.5
     class_list = ["tld_green", "tld_red"]
     RED = (0, 0, 255)
     WHITE = (255, 255, 255)
